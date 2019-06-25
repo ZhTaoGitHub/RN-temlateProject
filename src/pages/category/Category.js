@@ -15,6 +15,7 @@ export default class Category extends Component {
     render() {
         return (
             <View style={styles.container}>
+                {/* <StatusBar barStyle='light-content' /> */}
                 <AppBar
                     text='分类'
                     textStyle={{ color: '#fefefe' }}

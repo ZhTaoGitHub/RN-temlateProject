@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text, TouchableOpacity, NativeModules, StatusBar as NStatusBar, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, NativeModules, StatusBar, Dimensions } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { Actions } from 'react-native-router-flux';
 
@@ -23,12 +23,11 @@ const AppBar = (props) => {
     textStyle,
     onPressLeftIcon = Actions.pop,
     onPressRightIcon = () => { },
-    color = 'light'
   } = props;
 
   return (
     <View style={[styles.bar, boxStyle]}>
-      <NStatusBar translucent={true} backgroundColor='#00000000' />
+      {/* <StatusBar translucent={true} barStyle='dark-content' /> */}
       <View style={styles.appBar}>
         <TouchableOpacity
           style={[styles.leftIconBox]} onPress={onPressLeftIcon}
@@ -60,7 +59,8 @@ const styles = StyleSheet.create({
   bar: {
     width: WINDOW_WIDTH,
     backgroundColor: defaultColor,
-    elevation: 0
+    elevation: 0,
+    paddingTop: STATUSBAR_HEIGHT
   },
   statusBar: {
     // height: STATUSBAR_HEIGHT,
@@ -69,8 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 50,
-    marginTop: STATUSBAR_HEIGHT
+    height: 56,
   },
   leftIconBox: {
     marginLeft: 16

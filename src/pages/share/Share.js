@@ -19,6 +19,7 @@ export default class Share extends Component {
                     text='分享'
                     textStyle={{ color: '#fefefe' }}
                     leftIcon={() => { return <Text></Text> }}
+                    statusBar='light'
                 />
                 <View style={styles.content}>
                     <Button />

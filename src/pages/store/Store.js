@@ -19,6 +19,7 @@ export default class Store extends Component {
                     text='服务中心'
                     textStyle={{ color: '#fefefe' }}
                     leftIcon={() => { return <Text></Text> }}
+                    statusBar='light'
                 />
                 <View style={styles.content}>
                     <Button />

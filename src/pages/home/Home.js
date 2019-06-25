@@ -15,10 +15,11 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
+                {/* <StatusBar barStyle='dark-content' /> */}
                 <AppBar
                     text='首页'
-                    textStyle={{ color: '#444' }}
-                    boxStyle={{ backgroundColor: '#fefefe' }}
+                    textStyle={{ color: '#fefefe' }}
+                    boxStyle={{ backgroundColor: '#0af' }}
                     leftIcon={() => { return <Text></Text> }}
                 />
                 <View style={styles.content}>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, StatusBar, Dimensions, Animated } from 'react-native';
+import { StyleSheet, View, Image, Dimensions, Animated, StatusBar } from 'react-native';
 import { Router, Scene, Tabs } from 'react-native-router-flux';
 import Home from './home/Home';
 import Category from './category/Category';
@@ -17,6 +17,7 @@ export default class App extends Component {
 
         this.state = {
             springValue: new Animated.Value(1),
+            barStyle: 'dark-content'
         };
 
         this.springAnimated = Animated.spring(
@@ -33,7 +34,6 @@ export default class App extends Component {
     render() {
         return (
             <View style={styles.container}>
-
                 <Router
                     backAndroidHandler={() => {
                         return false;
@@ -150,7 +150,6 @@ export default class App extends Component {
                                 }}
                             />
                         </Tabs>
-
                     </Scene>
                 </Router>
             </View>

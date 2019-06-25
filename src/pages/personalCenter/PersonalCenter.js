@@ -19,6 +19,7 @@ export default class PersonalCenter extends Component {
                     text='个人中心'
                     textStyle={{ color: '#fefefe' }}
                     leftIcon={() => { return <Text></Text> }}
+                    statusBar='light'
                 />
                 <View style={styles.content}>
                     <Button />
